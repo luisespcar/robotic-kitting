@@ -109,7 +109,7 @@ The system is divided into three main layers:
 
 ### Programming
 
-* Python 3.x
+* Python 3.13.12
 
 ### Computer Vision
 
@@ -207,64 +207,112 @@ The system incorporates several safety mechanisms:
 ## Repository Structure
 
 ```text
-project/
+ModularProgramming/
 │
-├── dataset/
-│   ├── images/
-│   ├── labels/
-│   └── data.yaml
+├── config/
+│   ├── camera_calibration.json
+│   ├── homography.json
+│   └── yolo_logic_rois_updated.json
 │
-├── vision/
-│   ├── roi_detection/
-│   ├── yolo_detection/
-│   ├── segmentation/
-│   └── calibration/
+├── model/
+│   ├── best.pt
+│   ├── best_brigde.pt
+│   ├── best_robot.pt
+│   └── hand_landmarker.task
 │
-├── robodk/
-│   ├── stations/
-│   ├── programs/
-│   └── api/
+├── scripts/
+│   ├── bridge_camera_test.py
+│   ├── recompute_homography.py
+│   ├── show_calibration_overlay.py
+│   ├── show_calibration_overlay_to_desktop.py
+│   └── show_undistorted_and_robot_coords.py
 │
-├── robot/
-│   ├── urscript/
-│   └── communication/
+├── station_mixins/
+│   ├── bridge_mixin.py
+│   ├── cell_motion_mixin.py
+│   ├── cell_processing_mixin.py
+│   ├── completion_mixin.py
+│   ├── evaluation_mixin.py
+│   ├── lid_flow_mixin.py
+│   ├── memory_mixin.py
+│   ├── robodk_motion_mixin.py
+│   ├── safety_mixin.py
+│   └── __init__.py
 │
-├── models/
-│   ├── yolo_detection.pt
-│   └── yolo_segmentation.pt
+├── tests/
+│   ├── calibrate_plane_homography (1).py
+│   ├── calibrate_plane_homography (2).py
+│   ├── test_bridge_gripper_timing.py
+│   ├── test_cell_processing_continuous_motion.py
+│   └── test_robodk_live_updater_identity.py
 │
-├── assets/
-│   ├── images/
-│   ├── videos/
-│   └── diagrams/
-│
-├── docs/
-│   └── thesis.pdf
-│
-└── README.md
-```
+├── app.py
+├── app_config.py
+├── app_utils.py
+├── calibration.py
+├── camera_capture.py
+├── drawing.py
+├── final_slot_lock.py
+├── frame_processing.py
+├── Main.py
+├── mediapipe_compat.py
+├── object_names.py
+├── README.md
+├── robodk_compat.py
+├── robodk_live_updater.py
+├── robot_commands.py
+├── robot_speed_profile.py
+├── robot_worker.py
+├── safety_control.py
+├── StateMachine.py
+├── station_bootstrap.py
+├── station_config.py
+├── station_helpers.py
+├── station_logic.py
+├── vision_detection.py
+├── vision_worker.py
+└── __init__.py
 
 ---
+```
+## Installation and Execution
 
-## Installation
+This section explains how to install the required tools and how to run the robotic kitting workflow.
 
-Clone the repository:
+### Installation
+
+1. Clone the repository to your local computer so that all project files are available:
 
 ```bash
-git clone https://github.com/your-username/battery-cell-kitting-system.git
-
-cd battery-cell-kitting-system
+git clone https://github.com/luisespcar/robotic-kitting.git
 ```
 
-Create a virtual environment:
+2. Open the downloaded project folder:
 
 ```bash
-python -m venv venv
-
-source venv/bin/activate
+cd robotic-kitting
 ```
 
-Install dependencies:
+3. Install the required software:
+
+- **Python**: used to run the control, coordination, and robot communication scripts.
+- **MediaPipe**: used for hand detection and safety verification.
+- **Anaconda**: used to manage the vision environment, video input, and camera execution.
+- **RoboDK**: used to load and operate the digital twin of the robotic workstation.
+
+4. Make sure the Anaconda environment used for the vision system is available. In this project, the environment is called:
+
+```bash
+vision_runtime
+```
+
+5. Activate the environment from an Anaconda Prompt:
+
+```bash
+conda activate vision_runtime
+```
+
+6. Install the required Python dependencies if they are not already installed:
 
 ```bash
 pip install -r requirements.txt
@@ -272,21 +320,43 @@ pip install -r requirements.txt
 
 ---
 
-## Running the Vision System
+### Execution
+
+Follow these steps to run the system.
+
+1. If the real robot is going to be used instead of simulation only, power on the UR10e robot and connect the computer to the robot using an Ethernet cable.
+
+2. Open **RoboDK** and load the correct station file for this project. This file contains the digital twin of the robotic cell.
+
+3. If physical execution is required, connect RoboDK to the real UR10e robot. If only simulation is required, the workflow can be tested directly in the digital twin.
+
+4. Connect the camera to the computer so that the vision system can receive the video input.
+
+5. Open an **Anaconda Prompt** and activate the project environment:
 
 ```bash
-python vision/yolo_detection/main.py
+conda activate vision_runtime
 ```
 
----
+6. Move to the folder where `Main.py` is located. For example:
 
-## Running the Digital Twin
+```bash
+cd path/to/robotic-kitting/ModularProgramming
+```
 
-1. Open RoboDK.
-2. Load the station file.
-3. Connect to the UR10e robot.
-4. Start the Python communication script.
-5. Execute the kitting process.
+7. Run the main script from this environment:
+
+```bash
+python Main.py
+```
+
+8. Once the robot, camera, and RoboDK station are ready, place the boxes and components in the workstation. The robotic kitting workflow can then be executed.
+
+9. To repeat the process, run `Main.py` again from the Anaconda Prompt:
+
+```bash
+python Main.py
+```
 
 ---
 
