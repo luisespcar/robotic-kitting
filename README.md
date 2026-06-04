@@ -281,38 +281,38 @@ This section explains how to install the required tools and how to run the robot
 
 ### Installation
 
-1. Clone the repository to your local computer so that all project files are available:
+#### 1. Clone the repository to your local computer so that all project files are available:
 
 ```bash
 git clone https://github.com/luisespcar/robotic-kitting.git
 ```
 
-2. Open the downloaded project folder:
+#### 2. Open the downloaded project folder:
 
 ```bash
 cd robotic-kitting
 ```
 
-3. Install the required software:
+#### 3. Install the required software:
 
 - **Python**: used to run the control, coordination, and robot communication scripts.
 - **MediaPipe**: used for hand detection and safety verification.
 - **Anaconda**: used to manage the vision environment, video input, and camera execution.
 - **RoboDK**: used to load and operate the digital twin of the robotic workstation.
 
-4. Make sure the Anaconda environment used for the vision system is available. In this project, the environment is called:
+#### 4. Make sure the Anaconda environment used for the vision system is available. In this project, the environment is called:
 
 ```bash
 vision_runtime
 ```
 
-5. Activate the environment from an Anaconda Prompt:
+#### 5. Activate the environment from an Anaconda Prompt:
 
 ```bash
 conda activate vision_runtime
 ```
 
-6. Add gripper programmes
+#### 6. Add gripper programmes
 
 The gripper movements must be created manually using the robot's FlexPendant.  
 These programmes are required for the real robot to operate correctly.
@@ -327,35 +327,35 @@ This step is only required when using the physical robot. For simulation-only ex
 
 Follow these steps to run the system.
 
-1. If the real robot is going to be used instead of simulation only, power on the UR10e robot and connect the computer to the robot using an Ethernet cable.
+#### 1. If the real robot is going to be used instead of simulation only, power on the UR10e robot and connect the computer to the robot using an Ethernet cable.
 
-2. Open **RoboDK** and load the correct station file for this project. This file contains the digital twin of the robotic cell.
+#### 2. Open **RoboDK** and load the correct station file for this project. This file contains the digital twin of the robotic cell.
 
-3. If physical execution is required, connect RoboDK to the real UR10e robot. If only simulation is required, the workflow can be tested directly in the digital twin.
+#### 3. If physical execution is required, connect RoboDK to the real UR10e robot. If only simulation is required, the workflow can be tested directly in the digital twin.
 
-4. Connect the camera to the computer so that the vision system can receive the video input.
+#### 4. Connect the camera to the computer so that the vision system can receive the video input.
 
-5. Open an **Anaconda Prompt** and activate the project environment:
+#### 5. Open an **Anaconda Prompt** and activate the project environment:
 
 ```bash
 conda activate vision_runtime
 ```
 
-6. Move to the folder where `Main.py` is located. For example:
+#### 6. Move to the folder where `Main.py` is located. For example:
 
 ```bash
 cd path/to/robotic-kitting/ModularProgramming
 ```
 
-7. Run the main script from this environment:
+#### 7. Run the main script from this environment:
 
 ```bash
 python Main.py
 ```
 
-8. Once the robot, camera, and RoboDK station are ready, place the boxes and components in the workstation. The robotic kitting workflow can then be executed.
+#### 8. Once the robot, camera, and RoboDK station are ready, place the boxes and components in the workstation. The robotic kitting workflow can then be executed.
 
-9. To repeat the process, run `Main.py` again from the Anaconda Prompt:
+#### 9. To repeat the process, run `Main.py` again from the Anaconda Prompt:
 
 ```bash
 python Main.py
