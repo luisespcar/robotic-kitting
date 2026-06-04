@@ -365,9 +365,11 @@ python Main.py
 
 ## Authors
 
-**Adrián Ortiz Murillo**
+## Authors
 
-**Luis España Carnero**
+**[Adrián Ortiz Murillo](https://github.com/robo-adriortmur)**
+
+**[Luis España Carnero](https://github.com/luisespcar)**
 
 Bachelor Degree Project
 
