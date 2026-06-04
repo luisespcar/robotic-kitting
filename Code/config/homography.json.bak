@@ -1,0 +1,265 @@
+{
+    "description": "Homography from corrected image pixels directly to real RoboDK XY coordinates",
+    "important": "Use this homography only with undistorted images from the same camera pose. This version already outputs real RoboDK mm, so do not apply extra X/Y scale factors afterwards.",
+    "source_image": "C:/Users/luise/Desktop/Homograf\u00eda.jpg",
+    "used_camera_calibration": true,
+    "calibration_json": "Code nueva homografia/ModularProgramming/config/camera_calibration.json",
+    "coordinate_format": {
+        "image_points": "[u_px, v_px]",
+        "robot_points_mm": "[x_mm, y_mm]"
+    },
+    "image_points": [
+        [
+            561.25390625,
+            693.3633422851562
+        ],
+        [
+            962.0571899414062,
+            703.193603515625
+        ],
+        [
+            1368.8037109375,
+            712.9873657226562
+        ],
+        [
+            560.2481079101562,
+            826.640380859375
+        ],
+        [
+            960.0847778320312,
+            833.48974609375
+        ],
+        [
+            1361.047607421875,
+            845.357177734375
+        ],
+        [
+            560.1353759765625,
+            956.12451171875
+        ],
+        [
+            955.1729125976562,
+            964.7919311523438
+        ],
+        [
+            1354,
+            965
+        ]
+    ],
+    "robot_points_mm": [
+        [
+            0.0,
+            0.0
+        ],
+        [
+            300.0,
+            0.0
+        ],
+        [
+            600.0,
+            0.0
+        ],
+        [
+            0.0,
+            100.0
+        ],
+        [
+            300.0,
+            100.0
+        ],
+        [
+            600.0,
+            100.0
+        ],
+        [
+            0.0,
+            200.0
+        ],
+        [
+            300.0,
+            200.0
+        ],
+        [
+            600.0,
+            200.0
+        ]
+    ],
+    "homography_pixel_to_robot": [
+        [
+            0.7080337015961363,
+            0.0007648672290026016,
+            -397.09452558278696
+        ],
+        [
+            -0.01413305695124861,
+            0.7227049140531219,
+            -494.853874135971
+        ],
+        [
+            1.4341809394009947e-06,
+            -6.77733887422009e-05,
+            0.9999999999999999
+        ]
+    ],
+    "z_pick_mm": 45.0,
+    "z_approach_mm": 120.0,
+    "reprojection_errors": [
+        {
+            "point": "P1",
+            "pixel": [
+                561.25390625,
+                693.3633422851562
+            ],
+            "robot_expected_mm": [
+                0.0,
+                0.0
+            ],
+            "robot_predicted_mm": [
+                0.862313,
+                -1.7708
+            ],
+            "error_mm": 1.969598,
+            "inlier": true
+        },
+        {
+            "point": "P2",
+            "pixel": [
+                962.0571899414062,
+                703.193603515625
+            ],
+            "robot_expected_mm": [
+                300.0,
+                0.0
+            ],
+            "robot_predicted_mm": [
+                298.422656,
+                -0.261303
+            ],
+            "error_mm": 1.598841,
+            "inlier": true
+        },
+        {
+            "point": "P3",
+            "pixel": [
+                1368.8037109375,
+                712.9873657226562
+            ],
+            "robot_expected_mm": [
+                600.0,
+                0.0
+            ],
+            "robot_predicted_mm": [
+                600.44571,
+                1.13273
+            ],
+            "error_mm": 1.217265,
+            "inlier": true
+        },
+        {
+            "point": "P4",
+            "pixel": [
+                560.2481079101562,
+                826.640380859375
+            ],
+            "robot_expected_mm": [
+                0.0,
+                100.0
+            ],
+            "robot_predicted_mm": [
+                0.224694,
+                100.17702
+            ],
+            "error_mm": 0.286048,
+            "inlier": true
+        },
+        {
+            "point": "P5",
+            "pixel": [
+                960.0847778320312,
+                833.48974609375
+            ],
+            "robot_expected_mm": [
+                300.0,
+                100.0
+            ],
+            "robot_predicted_mm": [
+                299.839991,
+                99.423717
+            ],
+            "error_mm": 0.598084,
+            "inlier": true
+        },
+        {
+            "point": "P6",
+            "pixel": [
+                1361.047607421875,
+                845.357177734375
+            ],
+            "robot_expected_mm": [
+                600.0,
+                100.0
+            ],
+            "robot_predicted_mm": [
+                600.448919,
+                102.528131
+            ],
+            "error_mm": 2.567679,
+            "inlier": true
+        },
+        {
+            "point": "P7",
+            "pixel": [
+                560.1353759765625,
+                956.12451171875
+            ],
+            "robot_expected_mm": [
+                0.0,
+                200.0
+            ],
+            "robot_predicted_mm": [
+                0.247335,
+                201.094949
+            ],
+            "error_mm": 1.122537,
+            "inlier": true
+        },
+        {
+            "point": "P8",
+            "pixel": [
+                955.1729125976562,
+                964.7919311523438
+            ],
+            "robot_expected_mm": [
+                300.0,
+                200.0
+            ],
+            "robot_predicted_mm": [
+                299.084624,
+                201.826901
+            ],
+            "error_mm": 2.0434,
+            "inlier": true
+        },
+        {
+            "point": "P9",
+            "pixel": [
+                1354,
+                965
+            ],
+            "robot_expected_mm": [
+                600.0,
+                200.0
+            ],
+            "robot_predicted_mm": [
+                600.423758,
+                195.848655
+            ],
+            "error_mm": 4.172917,
+            "inlier": true
+        }
+    ],
+    "mean_error_mm": 1.730708,
+    "max_error_mm": 4.172917,
+    "extra_scale_after_homography": "DO_NOT_USE",
+    "edited_with": "C:\\Users\\luise\\OneDrive - H\u00f6gskolan i Sk\u00f6vde\\TFG\\Code nueva homografia\\ModularProgramming\\calibrate_plane_homography (2).py"
+}

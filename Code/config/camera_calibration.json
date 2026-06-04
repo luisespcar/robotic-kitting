@@ -1,0 +1,137 @@
+{
+    "description": "Camera calibration parameters using cropped checkerboard points",
+    "checkerboard_full_internal_corners": {
+        "columns": 16,
+        "rows": 22
+    },
+    "checkerboard_used_internal_corners": {
+        "columns": 14,
+        "rows": 20
+    },
+    "removed_points": {
+        "left": 1,
+        "right": 1,
+        "top": 1,
+        "bottom": 1
+    },
+    "square_size": 1.4,
+    "image_size": {
+        "width": 1920,
+        "height": 1080
+    },
+    "rms_reprojection_error": 0.37322091813252734,
+    "camera_matrix": [
+        [
+            1437.1298662463726,
+            0.0,
+            913.2151272472853
+        ],
+        [
+            0.0,
+            1437.0788767727536,
+            528.7836287409109
+        ],
+        [
+            0.0,
+            0.0,
+            1.0
+        ]
+    ],
+    "distortion_coefficients": [
+        [
+            0.008554031874072266,
+            -0.059078437603786796,
+            0.0,
+            0.0,
+            0.0
+        ]
+    ],
+    "calibration_flags": {
+        "use_stable_calibration_flags": true,
+        "fix_k3": true,
+        "zero_tangent_dist": true,
+        "opencv_flags_value": 136
+    },
+    "valid_images": [
+        "frame_00165.jpg",
+        "frame_00198.jpg",
+        "frame_00217.jpg",
+        "frame_00242.jpg",
+        "frame_00298.jpg",
+        "frame_00299.jpg",
+        "frame_00322.jpg",
+        "frame_00325.jpg",
+        "frame_00376.jpg",
+        "frame_00406.jpg",
+        "frame_00441.jpg",
+        "frame_00525.jpg",
+        "WIN_20260506_19_47_14_Pro.jpg",
+        "WIN_20260506_19_47_20_Pro.jpg",
+        "WIN_20260506_19_48_07_Pro.jpg",
+        "WIN_20260506_19_48_17_Pro.jpg",
+        "WIN_20260506_19_48_27_Pro.jpg",
+        "WIN_20260506_19_48_36_Pro.jpg",
+        "WIN_20260506_19_48_48_Pro.jpg",
+        "WIN_20260506_19_49_03_Pro.jpg",
+        "WIN_20260506_19_53_35_Pro.jpg",
+        "WIN_20260506_19_53_41_Pro.jpg",
+        "WIN_20260506_19_53_47_Pro.jpg",
+        "WIN_20260506_19_53_54_Pro.jpg",
+        "WIN_20260506_19_54_03_Pro.jpg",
+        "WIN_20260506_19_54_09_Pro.jpg"
+    ],
+    "undistorted_examples": {
+        "alpha_0": {
+            "new_camera_matrix": [
+                [
+                    1424.8409112370564,
+                    0.0,
+                    911.2254346863951
+                ],
+                [
+                    0.0,
+                    1437.1082565233237,
+                    528.7587311808093
+                ],
+                [
+                    0.0,
+                    0.0,
+                    1.0
+                ]
+            ],
+            "roi": {
+                "x": 0,
+                "y": 0,
+                "width": 1919,
+                "height": 1079
+            },
+            "output_path": "camera_calibration\\undistorted_example_alpha_0.jpg"
+        },
+        "alpha_1": {
+            "new_camera_matrix": [
+                [
+                    1412.1835307914566,
+                    0.0,
+                    910.1951394877676
+                ],
+                [
+                    0.0,
+                    1408.5301334270378,
+                    528.5397232041295
+                ],
+                [
+                    0.0,
+                    0.0,
+                    1.0
+                ]
+            ],
+            "roi": {
+                "x": 7,
+                "y": 10,
+                "width": 1902,
+                "height": 1058
+            },
+            "output_path": "camera_calibration\\undistorted_example_alpha_1.jpg"
+        }
+    }
+}

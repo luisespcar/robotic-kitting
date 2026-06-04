@@ -1,0 +1,240 @@
+{
+    "description": "ROIs logicas para asignar detecciones YOLO a posiciones de rack, tapas, baterias y terminal rojo",
+    "coordinate_format": "[x, y, width, height]",
+    "reference_images": {
+        "rack": "C:/Users/ADRIAN/OneDrive - Högskolan i Skövde/NewCamera/NewCamera/YOLOMain/FrameVacio.jpg",
+        "tapas": "C:/Users/ADRIAN/OneDrive - Högskolan i Skövde/NewCamera/NewCamera/YOLOMain/FrameTapas.jpg",
+        "nada": "C:/Users/ADRIAN/OneDrive - Högskolan i Skövde/NewCamera/NewCamera/YOLOMain/FrameBaterias.jpg",
+        "terminal": "C:/Users/ADRIAN/OneDrive - Högskolan i Skövde/NewCamera/NewCamera/YOLOMain/FrameBaterias.jpg"
+    },
+    "rack_slots": {
+        "rack_slot_1": {
+            "roi_slot_box": [
+                695,
+                385,
+                205,
+                281
+            ],
+            "roi_lid": [
+                661,
+                382,
+                242,
+                321
+            ],
+            "battery_slots": {
+                "battery_slot_1": {
+                    "roi_battery": [
+                        683,
+                        649,
+                        193,
+                        44
+                    ],
+                    "roi_terminal_red": [
+                        828,
+                        651,
+                        40,
+                        31
+                    ],
+                    "expected_terminal_side": "left"
+                },
+                "battery_slot_2": {
+                    "roi_battery": [
+                        683,
+                        570,
+                        193,
+                        51
+                    ],
+                    "roi_terminal_red": [
+                        696,
+                        579,
+                        38,
+                        29
+                    ],
+                    "expected_terminal_side": "right"
+                },
+                "battery_slot_3": {
+                    "roi_battery": [
+                        683,
+                        467,
+                        203,
+                        56
+                    ],
+                    "roi_terminal_red": [
+                        827,
+                        479,
+                        37,
+                        30
+                    ],
+                    "expected_terminal_side": "left"
+                },
+                "battery_slot_4": {
+                    "roi_battery": [
+                        681,
+                        392,
+                        198,
+                        49
+                    ],
+                    "roi_terminal_red": [
+                        695,
+                        401,
+                        37,
+                        28
+                    ],
+                    "expected_terminal_side": "right"
+                }
+            }
+        },
+        "rack_slot_2": {
+            "roi_slot_box": [
+                958,
+                391,
+                208,
+                278
+            ],
+            "roi_lid": [
+                956,
+                391,
+                246,
+                319
+            ],
+            "battery_slots": {
+                "battery_slot_1": {
+                    "roi_battery": [
+                        970,
+                        644,
+                        201,
+                        56
+                    ],
+                    "roi_terminal_red": [
+                        1122,
+                        663,
+                        38,
+                        28
+                    ],
+                    "expected_terminal_side": "left"
+                },
+                "battery_slot_2": {
+                    "roi_battery": [
+                        973,
+                        573,
+                        202,
+                        57
+                    ],
+                    "roi_terminal_red": [
+                        995,
+                        586,
+                        35,
+                        29
+                    ],
+                    "expected_terminal_side": "right"
+                },
+                "battery_slot_3": {
+                    "roi_battery": [
+                        974,
+                        479,
+                        206,
+                        61
+                    ],
+                    "roi_terminal_red": [
+                        1128,
+                        495,
+                        36,
+                        29
+                    ],
+                    "expected_terminal_side": "left"
+                },
+                "battery_slot_4": {
+                    "roi_battery": [
+                        982,
+                        403,
+                        199,
+                        61
+                    ],
+                    "roi_terminal_red": [
+                        998,
+                        416,
+                        38,
+                        30
+                    ],
+                    "expected_terminal_side": "right"
+                }
+            }
+        },
+        "rack_slot_3": {
+            "roi_slot_box": [
+                1203,
+                390,
+                222,
+                280
+            ],
+            "roi_lid": [
+                1240,
+                397,
+                259,
+                320
+            ],
+            "battery_slots": {
+                "battery_slot_1": {
+                    "roi_battery": [
+                        1248,
+                        660,
+                        208,
+                        46
+                    ],
+                    "roi_terminal_red": [
+                        1401,
+                        674,
+                        36,
+                        29
+                    ],
+                    "expected_terminal_side": "left"
+                },
+                "battery_slot_2": {
+                    "roi_battery": [
+                        1251,
+                        580,
+                        206,
+                        57
+                    ],
+                    "roi_terminal_red": [
+                        1273,
+                        593,
+                        38,
+                        30
+                    ],
+                    "expected_terminal_side": "right"
+                },
+                "battery_slot_3": {
+                    "roi_battery": [
+                        1253,
+                        484,
+                        210,
+                        57
+                    ],
+                    "roi_terminal_red": [
+                        1411,
+                        501,
+                        38,
+                        28
+                    ],
+                    "expected_terminal_side": "left"
+                },
+                "battery_slot_4": {
+                    "roi_battery": [
+                        1259,
+                        412,
+                        209,
+                        54
+                    ],
+                    "roi_terminal_red": [
+                        1283,
+                        422,
+                        38,
+                        31
+                    ],
+                    "expected_terminal_side": "right"
+                }
+            }
+        }
+    }
+}
