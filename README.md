@@ -312,11 +312,14 @@ vision_runtime
 conda activate vision_runtime
 ```
 
-6. Install the required Python dependencies if they are not already installed:
+6. Add gripper programmes
 
-```bash
-pip install -r requirements.txt
-```
+The gripper movements must be created manually using the robot's FlexPendant.  
+These programmes are required for the real robot to operate correctly.
+
+Each gripper programme must have the same name as the one referenced in the Python code. If the programme names do not match, the real robot will not be able to execute the corresponding gripper actions.
+
+This step is only required when using the physical robot. For simulation-only execution, these FlexPendant gripper programmes are not required.
 
 ---
 
