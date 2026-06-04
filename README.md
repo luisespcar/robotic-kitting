@@ -33,18 +33,18 @@ The system was developed following Industry 5.0 principles, combining collaborat
 
 *Click the image to watch the complete demonstration video.*
 
-## ✨ Main Features
+##  Main Features
 
-- 🤖 Vision-guided robotic kitting with UR10e
-- 🔍 Real-time battery cell detection using YOLOv8
-- 🎯 Automatic polarity and orientation verification
-- 📍 Camera calibration and image-to-world mapping
-- 📦 Automated pick-and-place and sorting operations
-- 🏭 Real-time RoboDK Digital Twin synchronization
-- 🚧 Collision-aware trajectory validation
-- ✋ Human-safe collaborative robotics workflow
-- ⚡ Low-latency communication architecture
-- 🔄 Support for both Classical CV and AI-based detection
+-  Vision-guided robotic kitting with UR10e
+-  Real-time battery cell detection using YOLOv8
+-  Automatic polarity and orientation verification
+-  Camera calibration and image-to-world mapping
+-  Automated pick-and-place and sorting operations
+-  Real-time RoboDK Digital Twin synchronization
+-  Collision-aware trajectory validation
+-  Human-safe collaborative robotics workflow
+-  Low-latency communication architecture
+-  Support for both Classical CV and AI-based detection
 
 ---
 
