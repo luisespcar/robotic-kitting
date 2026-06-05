@@ -3,7 +3,7 @@
 [![Python](https://img.shields.io/badge/Python-3.13.12-blue?logo=python)](https://www.python.org/)
 ![YOLOv8](https://img.shields.io/badge/YOLOv8%20-%20?style=flat&logo=YOLO&label=Ultralytics&labelColor=grey&link=https%3A%2F%2Fdocs.ultralytics.com%2F
 )
-[![OpenCV](https://img.shields.io/badge/OpenCV-4.x-green?logo=opencv)](https://opencv.org/)
+[![OpenCV](https://img.shields.io/badge/OpenCV-4.13-green?logo=opencv)](https://opencv.org/)
 [![RoboDK](https://img.shields.io/badge/RoboDK-Digital_Twin-darkgreen)](https://robodk.com/)
 [![UR10e](https://img.shields.io/badge/UR10e-Collaborative_Robot-orange)](https://www.universal-robots.com/products/ur10-robot/)
 [![Robotiq](https://img.shields.io/badge/Gripper-Robotiq_2F--85-color=%23ffdcb2)](https://robotiq.com/products/2f85-140-adaptive-robot-gripper)
@@ -27,7 +27,7 @@ The system was developed following Industry 5.0 principles, combining collaborat
 
 ---
 
-## 🎥 System Demonstration
+## System Demonstration
 
 [![UR10e Battery Cell Kitting System](https://img.youtube.com/vi/CinmK6UtbHQ/maxresdefault.jpg)](https://www.youtube.com/watch?v=CinmK6UtbHQ)
 
